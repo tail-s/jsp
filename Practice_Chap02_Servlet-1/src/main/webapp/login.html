@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 화면</title>
+<style type="text/css">
+	/* 인라인 스타일의 css지정
+	id선택자를 통한 스타일 지정 */
+	#loginFormArea {
+		text-align: center;
+		width: 300px;
+		margin: auto;
+		border: 1px solid red;
+	}
+	/* 태그선택자 */
+	h1 {
+		text-align: center;
+		color: blue;
+	}
+</style>
+</head>
+<body>
+	<h1>로그인</h1>
+	<section id="loginFormArea">	<!-- section영역의 id를 loginFormArea로 지정함 -->
+		<form action="login" method="post">
+			<br>
+			<label>아이디 : </label>	<!-- 브라우저에 글자를 표식하는 태그 -->
+			<!-- required속성은 반드시 입력하시오 라는 속성 -->
+			<input type="text" name="id" id="id" required="required">
+			<br>	<!-- 줄바꿈 해주는 태그 -->
+			<label>비밀번호 : </label>
+			<input type="password" name="passwd" id="passwd" required="required">
+			<br><br>
+			<input type="submit" value="로그인">		
+		</form>	
+	</section>
+
+</body>
+</html>
