@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Practice_Chap04_Servlet-3</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 첫 번째 방법 -->
+  <!-- <servlet>
+  	특정 서블릿을 지정하는 코드
+	<servlet-name>initParam</servlet-name>
+	<servlet-class>sec_exam02.initParam</servlet-class>	
+	특정 서블릿(sec_exam02.initParam)에만 적용되는 부분이다. 하여 servlet 파일을 지정할 때 그 안에 초기화 파라메터를 아래와 같이 기술한다.
+	init-param태그를 이용하여 지정한다.
+	<init-param>
+		<param-name>id</param-name>
+		<param-value>scott</param-value>
+	</init-param>
+	<init-param>
+		<param-name>pw</param-name>
+		<param-value>tiger</param-value>
+	</init-param>
+	<init-param>
+		<param-name>path</param-name>
+		<param-value>C:\\Temp</param-value>
+	</init-param>	
+  </servlet>
+  
+  서블릿 맵핑코드 작성
+  <servlet-mapping>
+  	<servlet-name>initParam</servlet-name>
+  	<url-pattern>/IP</url-pattern>
+  </servlet-mapping> -->
+  
+  <!-- 하나의 프로젝트 안에 여러 서블릿 파일에서 함께 공유하면서 사용할 수 있도록 context-param태그를 이용하여 파라메터 값들을 설정했다.
+  특정 서블릿을 맵핑하는 코드가 없는 것을 알 수 있다. -->
+  <context-param>
+  	<param-name>id</param-name>
+  	<param-value>scott</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>pw</param-name>
+  	<param-value>tiger</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>path</param-name>
+  	<param-value>C:\\temp</param-value>
+  </context-param>
+  
+  <listener>
+  	<listener-class>sec_exam04.ServletListener</listener-class>
+  </listener>
+  
+</web-app>
+
